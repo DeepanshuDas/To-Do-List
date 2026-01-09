@@ -30,13 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const loadTasksFromLocalStorage = () => {
-    const savedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
-    savedTasks.forEach(({ text, completed }) => {
-        addTask(text, completed, false);
-    });
-    toggleEmptyState();
-    };
-    
+  const savedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+
+  savedTasks.forEach(({ text, completed }) => {
+    addTask(text, completed, false);
+  });
+
+  toggleEmptyState();
+};
+
 
 
     const addTask = (text, completed = false) => {
@@ -115,3 +117,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleEmptyState();
 });
+
