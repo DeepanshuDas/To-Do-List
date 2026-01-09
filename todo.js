@@ -91,7 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
         updateProgress(checkCompletion);
     };
 
-    taskBtn.addEventListener('click', () => addTask());
+    taskBtn.addEventListener("click", (e) => {
+      e.preventDefault();   // 🚫 stops page refresh
+      addTask();
+    });
 
     taskInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -102,3 +105,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toggleEmptyState();
 });
+
