@@ -97,6 +97,7 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 10px;
 }
 
 #numbers{
@@ -122,6 +123,8 @@ body{
     border-radius: 22px;
     background: rgba(225,194,209,0.3);
     color: #dbdbdb;
+    width: 100%;
+    min-width: 0;
 }
 
 
@@ -259,3 +262,16 @@ body{
     background: #ff6f91;
 
 }
+
+@media (max-width: 480px) {
+  .input-area input {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .input-area button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
